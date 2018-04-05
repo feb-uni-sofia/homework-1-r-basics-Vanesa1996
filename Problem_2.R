@@ -21,16 +21,26 @@ avgMinimum <- totalMinimum / length (xmin )
 the minimum temperature was below its weekly average.
 
 xmin < avgMinimum
+
+## NOTE: this works but is inefficient
 xmin [ c (2,4,6,7)]
+
+## Better:
+xmin[xmin < avgMinimum]
 
 (e) Use the subsetting operator [ ] to select those elements of xmin where
 the maximal temperature was above its weekly average.
 
+## Wrong condition
 xmin > avgMaximum
 xmin [ c (3)]
 
+## Correct:
+xmin[xmax > avgMaximum]
+
 (f) Assign names to the elements of xmin and xmax.
 
+## Nice
 dayNames <- c('03Mon18', '04Tue18', '05Wed18', '04Thu18', '05Fri18', '06Sat18', '07Sun18')
 names(xmin) <- dayNames
 names(xmax) <- dayNames
@@ -42,11 +52,14 @@ temperatures= data.frame (dayNames,xmin, xmax )
 (h) Create a new column in xminFahrenheit that equals the minimum
 temperature converted to a Fahrenheit scale.
 
+## It is not clear how xminFahrenheit is calculated!
+
 xminFahrenheit <- c( 73.4, 68.9, 82.76, 68.54, 72.32, 62.96, 64.76 )
 temperatures [["xminFahrenheit"]] <- xminFahrenheit
 
 (i) Create a new data.frame that contains only the temperature measurements in Fahrenheit.
 
+## Same comment as above
 xmaxFahrenheit <- c(77, 72.32, 88.16, 81.14, 83.12, 68.36, 75.38)
 temperatureFahrenheit = data.frame (  xminFahrenheit, xmaxFahrenheit)
 

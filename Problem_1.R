@@ -12,6 +12,8 @@ y <- c(1, 4)
 x – y 
  # When calculating the two vectors x (4,1,1,4) and y (1,4) because of  difference in lengths the answer is (3,-3,0,0)
 
+## True, but the question is about how R deals with the different lengths.
+
 (d) Concatenate x and y to a new vector called s. 
 
 s <- c(x, y)
