@@ -1,9 +1,12 @@
 
-(a) Create a vector with the numbers 4, 1, 1, 4 called x. 
+## Use comments comments to write text. Otherwise your code is not runnable
+## and will not be reviewed or graded in the future.
+
+# (a) Create a vector with the numbers 4, 1, 1, 4 called x. 
  
 x <- c(4, 1, 1, 4)
  
-(b) Create a second vector called y with the numbers 1, 4. 
+# (b) Create a second vector called y with the numbers 1, 4. 
 
 y <- c(1, 4)
 
